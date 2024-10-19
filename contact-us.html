@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: springgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+
+        .container {
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 10px;
+            gap: 10px;
+            width: 90%;
+            max-width: 900px;  /* Limit container width on larger screens */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .col-left, .col-right {
+            padding: 15px;
+        }
+
+        .col-left {
+            width: 50%;
+            text-align: center;
+        }
+
+        .col-right {
+            width: 50%;
+            padding: 35px 0;
+              margin-right: 25px;
+
+            text-align: left;
+        }
+
+        #message, input[type=text], input[type=email], input[type=number] {
+            border: 1px solid rgba(57, 53, 53, 0.73);
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #message {
+            height: 80px;
+        }
+
+        button {
+            background-color: springgreen;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            padding-top: 20px;
+                margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            /* Stack columns on smaller screens */
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .col-left, .col-right {
+                width: 100%;
+                text-align: center; /* Center-align text on smaller screens */
+            }
+
+            .col-right {
+                padding: 20px;
+                 margin-right: 0 ;
+
+            }
+
+            img {
+                    margin-top: 0;
+
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Further adjustments for very small screens (e.g., mobile) */
+            body {
+                height: auto;
+                padding: 20px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 400px;
+                margin: 0;
+            }
+
+            button {
+                width: 60%;
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            img {
+                margin-top: 0;
+                width: 120px;
+                height: 120px;
+            }
+               #message, input[type=text], input[type=email], input[type=number] {
+            border: 1px solid rgba(57, 53, 53, 0.73);
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="col-left">
+        <h1 style="color: darkgreen">Contact Us</h1>
+        <p>Or reach us at <span style="color: blue">@evanzo.net@gmail.com</span></p>
+        <div class="image-box"><img src="paper-plane.png" alt="Paper Plane Image"></div>
+    </div>
+    <div class="col-right">
+        <form action="">
+            <label for="email">Email address</label><br>
+            <input type="email" id="email">
+            <p id="email-txt" style="color: green">We'll not share your email with anyone else.</p><br><br>
+
+            <label for="name">Your name</label><br>
+            <input type="text" id="name"><br><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" value="Hello am contacting to inquire about .."></textarea><br>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
